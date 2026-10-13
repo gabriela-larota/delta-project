@@ -1533,7 +1533,23 @@
   </section>
 
 </main>
-
+<script>
+(function () {
+  var el = document.querySelector('audio[src="charles-mclaurin-2.m4a"]');
+  if (!el) return;
+  var BOOST = 2.5; // 1 = original volume; raise or lower to taste
+  var ctx;
+  el.addEventListener('play', function () {
+    if (ctx) { ctx.resume(); return; }
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    ctx = new AC();
+    var gain = ctx.createGain();
+    gain.gain.value = BOOST;
+    ctx.createMediaElementSource(el).connect(gain).connect(ctx.destination);
+  });
+})();
+</script>
 <script src="script.js"></script>
 </body>
 </html>
