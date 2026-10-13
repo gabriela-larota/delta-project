@@ -1032,9 +1032,9 @@
             <div class="history">While the Jewish population in the Mississippi Delta is small, it remains a close-knit community. No more than three hundred Jewish southerners remain today, though in the late nineteenth century Delta Jews opened synagogues, cemeteries, and Jewish-owned businesses.</div>
             <div class="history">The Jewish-owned shops that once lined the Delta are gone, but the Hebrew Union Congregation and Temple Adath Israel remain active and vibrant today.</div>
 
-             <div class="voice-slot">
+            <div class="voice-slot">
               <div class="who">Interview — Historian</div>
-              <div class="prompt">Please view Google Drive for audio interviews and recordings from historian and community members.</div>
+              <div class="prompt">Full audio interviews and recordings from the historian and community members are available in the <a href="https://drive.google.com/drive/folders/1-0xJCeeuGb4RIqsmR_c7o-OCWT8lrQpI?usp=sharing" target="_blank" rel="noopener">Research &amp; Interviews Google Drive folder</a>.</div>
             </div>
           </div>
 
@@ -1047,6 +1047,7 @@
             <h3 class="faith-title">Italian Delta Community</h3>
             <div class="history">Many Italians who settled in Mississippi were Roman Catholic and established churches throughout the Delta. In the 20th century they faced discrimination — the KKK targeted Italian Catholics, and newspapers reinforced social biases against them.</div>
             <div class="history">After WWI, Italians integrated into Delta society through the success of the food and restaurant industry, and in the 1980s their bishops promoted the integration of Black Mississippians as well.</div>
+          </div>
 
         </div>
       </div>
@@ -1055,6 +1056,12 @@
   </section>
 
   <style>
+    /* Three equal columns, side by side; stack to one column on narrow screens */
+    #ch-faiths .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start; }
+    #ch-faiths .grid3 > .faith-col { grid-column: auto; min-width: 0; }
+    @media (max-width: 900px) {
+      #ch-faiths .grid3 { grid-template-columns: 1fr; }
+    }
     #ch-faiths .faith-col { display: flex; flex-direction: column; }
 
     /* Bigger photos */
